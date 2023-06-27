@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, List, Segment, Header } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 
 
@@ -44,6 +45,13 @@ function Display({ selectedDay, selectedMonth, marketSchedule, availableProduce}
         </Segment>
     </React.Fragment>
     );
+}
+
+Display.propTypes = {
+  selectedMonth: PropTypes.string.isRequired,
+  selectedDay: PropTypes.string.isRequired,
+  marketSchedule: PropTypes.array.isRequired,
+  availableProduce: PropTypes.array.isRequired,
 }
 
 export default Display;

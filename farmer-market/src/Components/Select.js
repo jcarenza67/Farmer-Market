@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 
 function Select({ setSelectedDay, setSelectedMonth, selectedDay, selectedMonth, marketSchedule, availableProduce}) {
     const dayOptions = marketSchedule.map((market) => (
@@ -38,6 +38,15 @@ function Select({ setSelectedDay, setSelectedMonth, selectedDay, selectedMonth, 
             </div>
         </React.Fragment>
     );
+    }
+
+    Select.propTypes = {
+        setSelectedDay: PropTypes.func.isRequired,
+        setSelectedMonth: PropTypes.func.isRequired,
+        selectedMonth: PropTypes.string.isRequired,
+        selectedDay: PropTypes.string.isRequired,
+        marketSchedule: PropTypes.array.isRequired,
+        availableProduce: PropTypes.array.isRequired,
     }
 
 export default Select;
