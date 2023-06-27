@@ -1,4 +1,4 @@
-export const availableProduce = [  
+const availableProduce = [  
    {  
       month: "January",
       selection: [  
@@ -266,3 +266,6 @@ export const availableProduce = [
       ]
    }
    ];
+
+
+   export default availableProduce;
